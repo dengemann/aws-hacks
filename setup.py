@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 #
 
-# Copyright (C) 2015 Denis Engemann
+# Copyright (C) 2016 Denis Engemann
 # <denis.engemann@gmail.com>
 
 import os
@@ -12,7 +12,7 @@ from numpy.distutils.core import setup
 
 # get the version (don't import mne here, so dependencies are not needed)
 version = None
-with open(os.path.join('hcp', '__init__.py'), 'r') as fid:
+with open(os.path.join('aws_hacks', '__init__.py'), 'r') as fid:
     for line in (line.strip() for line in fid):
         if line.startswith('__version__'):
             version = line.split('=')[1].strip().strip('\'')
@@ -21,15 +21,15 @@ if version is None:
     raise RuntimeError('Could not determine version')
 
 
-descr = """MNE HCP project for accessing the human connectome MEG data."""
+descr = """Hacks for processing data using Amazon Web Services."""
 
-DISTNAME = 'hcp'
+DISTNAME = 'aws_hacks'
 DESCRIPTION = descr
 MAINTAINER = 'Denis A. Engemann'
 MAINTAINER_EMAIL = 'denis.engemann@gmail.com'
-URL = 'http://github.com/mne-tools/mne-python'
+URL = 'http://github.com/dengemann/aws_hacks'
 LICENSE = 'BSD (3-clause)'
-DOWNLOAD_URL = 'http://github.com/mne-tools/mne-hcp'
+DOWNLOAD_URL = 'http://github.com/dengemann/aws_hacks'
 VERSION = version
 
 
@@ -59,5 +59,4 @@ if __name__ == "__main__":
                        'Operating System :: Unix',
                        'Operating System :: MacOS'],
           platforms='any',
-          packages=['hcp',
-                    'hcp.workflows'])
+          packages=['aws_hacks'])

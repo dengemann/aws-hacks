@@ -1,4 +1,4 @@
-Copyright © 2011-2016, authors of MNE-HCP
+Copyright © 2011-2016, authors of aws_hacks
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
