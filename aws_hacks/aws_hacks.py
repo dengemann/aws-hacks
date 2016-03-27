@@ -218,7 +218,6 @@ def instance_run_jobs(code, image_id, key_name,
               }
             ]
     """
-
     ec2con = EC2Connection(aws_access_key_id=aws_access_key_id,
                            aws_secret_access_key=aws_secret_access_key)
 
